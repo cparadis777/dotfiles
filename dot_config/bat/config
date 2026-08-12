@@ -1,0 +1,8 @@
+# Set theme (e.g., Catppuccin, Nord, TwoDark, 1337)
+--theme="TwoDark"
+
+# Always show line numbers and Git modifications, but hide file header
+--style="numbers,changes"
+
+# Use paging only when content exceeds screen height
+--paging="auto"

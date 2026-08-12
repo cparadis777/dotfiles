@@ -2,6 +2,7 @@
 node = "lts"
 ripgrep = "latest"
 starship = "latest"
+bat = "latest"
 
 [settings]
 auto_install = true
