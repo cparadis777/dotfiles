@@ -6,6 +6,7 @@ bat = "latest"
 eza = "latest"
 fd = "latest"
 zoxide = "latest"
+sheldon = "latest"
 
 [settings]
 auto_install = true

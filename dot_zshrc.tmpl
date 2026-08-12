@@ -1,5 +1,18 @@
 
 export PATH="$PATH:/usr/bin"
+export PATH="$HOME/.local/bin:$HOME/.local/share/mise/bin:$PATH"
+
+if command -v mise &> /dev/null; then
+    eval "$(mise activate zsh)"
+fi
+
+autoload -Uz compinit
+compinit -d ~/.cache/zsh/zcompdump
+
+if command -v sheldon &> /dev/null; then
+    eval "$(sheldon source)"
+fi
+
 
 alias cat="bat"
 alias ls="eza --icons"
@@ -10,9 +23,7 @@ alias la="eza -lbhHigUmua --git"
 # Initialize Zoxide
 eval "$(zoxide init zsh)"
 
-if command -v mise &> /dev/null; then
-    eval "$(mise activate zsh)"
-fi
+
 
 if command -v starship &> /dev/null; then
     eval "$(starship init zsh)"

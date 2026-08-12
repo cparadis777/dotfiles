@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Hash trigger: {{ include "dot_config/mise/config.toml" | sha256sum }}
-
+# mise config hash: {{ include "dot_config/mise/config.toml" | sha256sum }}
+# sheldon config hash: {{ include "dot_config/sheldon/plugins.toml" | sha256sum }}
 set -euo pipefail
 
 # Ensure mise binary exists
@@ -13,3 +13,8 @@ fi
 # Fetch binaries listed in config.toml
 mise install -y
 mise prune -y
+
+if command -v sheldon &> /dev/null; then
+    echo "Syncing sheldon plugins..."
+    sheldon lock
+fi
