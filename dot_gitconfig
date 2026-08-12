@@ -1,0 +1,10 @@
+[user]
+	name = Cédric Paradis
+	email = cedric@cedricparadis.ca
+	signingkey = ~/.ssh/id_ed25519.pub
+
+[pull]
+	rebase = true
+
+[gpg]
+	format = ssh
