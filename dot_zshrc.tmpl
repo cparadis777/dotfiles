@@ -2,6 +2,13 @@
 export PATH="$PATH:/usr/bin"
 
 alias cat="bat"
+alias ls="eza --icons"
+alias l="eza -lbF --git"
+alias ll="eza -lbgf --git"
+alias la="eza -lbhHigUmua --git"
+
+# Initialize Zoxide
+eval "$(zoxide init zsh)"
 
 if command -v mise &> /dev/null; then
     eval "$(mise activate zsh)"

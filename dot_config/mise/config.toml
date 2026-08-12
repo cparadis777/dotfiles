@@ -3,6 +3,9 @@ node = "lts"
 ripgrep = "latest"
 starship = "latest"
 bat = "latest"
+eza = "latest"
+fd = "latest"
+zoxide = "latest"
 
 [settings]
 auto_install = true
