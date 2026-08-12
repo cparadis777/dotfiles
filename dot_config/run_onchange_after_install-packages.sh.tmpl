@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Hash trigger: {{ include "dot_config/mise/config.toml" | sha256sum }}
+
+set -euo pipefail
+
+# Ensure mise binary exists
+if ! command -v mise &> /dev/null; then
+    curl https://mise.run | sh
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Fetch binaries listed in config.toml
+mise install -y
+mise prune -y

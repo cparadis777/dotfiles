@@ -1,0 +1,8 @@
+[tools]
+node = "lts"
+ripgrep = "latest"
+starship = "latest"
+
+[settings]
+auto_install = true
+experimental = true

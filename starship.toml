@@ -1,0 +1,14 @@
+# Fast, clean, powerline-style prompt
+add_newline = true
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+[directory]
+truncation_length = 3
+style = "bold cyan"
+
+[git_branch]
+symbol = "🌱 "
+style = "bold yellow"
