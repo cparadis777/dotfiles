@@ -1,0 +1,14 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+# macOS setup using Homebrew Cask
+echo "Installing Nerd Fonts via Homebrew..."
+brew install --cask font-jetbrains-mono-nerd-font
+{{ else if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+# Linux setup (Example for Arch Linux using AUR)
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \
+&& cd ~/.local/share/fonts \
+&& unzip JetBrainsMono.zip \
+&& rm JetBrainsMono.zip \
+&& fc-cache -fv
+{{ end -}}
