@@ -14,10 +14,12 @@ fi
 
 
 alias cat="bat"
-alias ls="eza --icons"
+alias ls="eza"
 alias l="eza -lbF --git"
 alias ll="eza -lbgf --git"
 alias la="eza -lbhHigUmua --git"
+
+export EZA_ICONS_AUTO=true
 
 # Initialize Zoxide
 eval "$(zoxide init zsh)"
