@@ -8,7 +8,13 @@ error_symbol = "[✗](bold red)"
 [directory]
 truncation_length = 3
 style = "bold cyan"
+fish_style_pwd_dir_length = 1
 
 [git_branch]
-symbol = "🌱 "
 style = "bold yellow"
+
+[mise]
+disabled = false
+
+[line_break]
+disabled = false
